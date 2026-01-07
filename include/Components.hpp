@@ -1,4 +1,5 @@
 #pragma once
+#include "SFML/Graphics.hpp"
 
 class Component {
 
@@ -23,19 +24,18 @@ public:
 class CShape : public Component {
 
 public:
-	sf::CircleShape shape;
-	CShape(float silhouette) {
-		shape.setRadius(silhouette);
-	}
-
+  sf::CircleShape shape;
+  CShape(float silhouette) { shape.setRadius(silhouette); }
+  CShape() = default;
 };
 
 class CMovement : public Component {
 
 public:
-	sf::Vector2f pos;
-	CMovement(float locx, float locy) {
-		pos.x = locx;
-		pos.y = locy;
-	}
+  sf::Vector2f pos;
+  CMovement(float locx, float locy) {
+    pos.x = locx;
+    pos.y = locy;
+  }
+  CMovement() = default;
 };

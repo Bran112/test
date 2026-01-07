@@ -4,7 +4,7 @@
 #include <string>
 #include <tuple>
 
-using ComponentTuple = std::tuple<CInput>;
+using ComponentTuple = std::tuple<CInput, CMovement, CShape>;
 
 class Entity {
 
